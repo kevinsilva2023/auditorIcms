@@ -134,7 +134,7 @@ export class AuditorIcmsEntradasComponent {
       lancto: 5,
       nota: 54374,
       emitente: 'COMERCIAL INTER-LINK LTDA',
-      cfop: 11011,
+      cfop: 1101,
       vlCont: 'R$ 6.143,77',
       bsIcms: 'R$ 6.143,77',
       icms: 'R$ 1.105,0',
