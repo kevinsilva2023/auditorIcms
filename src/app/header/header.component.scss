@@ -1,0 +1,18 @@
+.theme {
+  color: var(--branco);
+  background-color: var(--cian);
+}
+.expandir {
+  background-color: var(--cinza-body);
+  border-radius: 20px;
+  padding: 2px 5px;
+  color: black;
+  font-size: 14px;  :hover {
+    cursor: pointer;
+  }
+}
+.btn-auditar {
+  background-color: var(--green-btn);
+  color: white;
+  font-weight: 600;
+}

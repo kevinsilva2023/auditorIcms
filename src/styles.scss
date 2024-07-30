@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --branco: #ffffff;
+  --cinza-body: #D9E0E7;
+  --cian: #2EA7CB;
+  --cian-two: #00ACAC;
+  --green-btn: #32a932;
+  --red-line: #ff5b5733;
+}
+body {
+  background-color: var(--cinza-body);
+}
+.fs-7 {
+  font-size: 14px;
+}

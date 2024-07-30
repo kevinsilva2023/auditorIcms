@@ -1,0 +1,141 @@
+<div class="card shadow-sm">
+  <h5 class="card-header d-flex justify-content-between theme">
+    <div></div>
+    <div class="fs-5 fw-bold d-flex align-items-center">RESUMO CFOP ENTRADAS</div>
+    <button class="btn btn-sm btn-export">
+      <i class="bi bi-file-earmark-excel-fill"></i>
+      Exportar Excel
+    </button>
+  </h5>
+
+  <div class="card-body">
+    <!-- <div class="card"> -->
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>CFOP</th>
+            <th>VL. CONTÁBIL</th>
+            <th>BS. ICMS</th>
+            <th>IMP. ICMS</th>
+            <th>ISENTO ICMS</th>
+            <th>OUTROS ICMS</th>
+            <th>IMP. IPI</th>
+            <th>IPI INCLUSO</th>
+            <th>ICMS ST</th>
+            <th>FCP</th>
+            <th>DIFERENÇA</th>
+            <th>MENSAGENS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let resumo of notas">
+            <td>{{ resumo.cfop }}</td>
+            <td>{{ resumo.contabil }}</td>
+            <td>{{ resumo.bcIcms }}</td>
+            <td>{{ resumo.icms }}</td>
+            <td>{{ resumo.isentos }}</td>
+            <td>{{ resumo.outros }}</td>
+            <td>{{ resumo.ipi }}</td>
+            <td>{{ resumo.iniInc }}</td>
+            <td>{{ resumo.st }}</td>
+            <td>{{ resumo.fcp }}</td>
+            <td>{{ resumo.dif }}</td>
+            <td>
+              <button *ngIf="resumo.msg !== null" class="btn btn-sm btn-error">
+                {{ resumo.msg }}
+              </button>
+            </td>
+          </tr>
+          <tr class="fw-bold">
+            <td>TOTAL</td>
+            <td>R$ 216.223,27</td>
+            <td>R$ 185.329,11</td>
+            <td>R$ 27.231,78</td>
+            <td>R$ 0,00</td>
+            <td>R$ 31.077,67</td>
+            <td>R$ 2.782,62</td>
+            <td>R$ 0,00</td>
+            <td>R$ 0,00</td>
+            <td>R$ 0,00</td>
+            <td>-R$ 1.966,03</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    <!-- </div> -->
+  </div>
+
+</div>
+
+<div class="card mt-4 shadow-sm">
+  <h5 class="card-header d-flex justify-content-between theme">
+    <div></div>
+    <div class="fs-5 fw-bold d-flex align-items-center">NOTAS ENTRADAS</div>
+    <button class="btn btn-sm btn-export">
+      <i class="bi bi-file-earmark-excel-fill"></i>
+      Exportar Excel
+    </button>
+  </h5>
+  <div class="card-body w-100">
+    <div class="d-flex w-form gap-3">
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">NOTA: </span>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">CFOP: </span>
+        <input type="text" class="form-control" placeholder="Filtrar por inicio CFOP">
+      </div>
+      <div class="input-group input-group-sm">
+        <span class="input-group-text">Mensagem: </span>
+        <input type="text" class="form-control" placeholder="Filtar por mensagem contém...">
+      </div>
+    </div>
+
+    <div class=" mt-3">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>LANCTO.</th>
+            <th>NOTA</th>
+            <th>EMITENTE</th>
+            <th>CFOP</th>
+            <th>VL. CONT.</th>
+            <th>BS. ICMS</th>
+            <th>IMP. ICMS</th>
+            <th>ISENTO ICMS</th>
+            <th>OUTROS ICMS</th>
+            <th>IMP. IPI</th>
+            <th>IPI INCLUSO</th>
+            <th>ICMS ST</th>
+            <th>FCP</th>
+            <th>DIFERENÇA</th>
+            <th>MENSAGENS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of itens">
+            <td>{{ item.lancto }}</td>
+            <td>{{ item.nota }}</td>
+            <td>{{ item.emitente }}</td>
+            <td>{{ item.cfop }}</td>
+            <td>{{ item.vlCont }}</td>
+            <td>{{ item.bsIcms }}</td>
+            <td>{{ item.icms }}</td>
+            <td>{{ item.isentos }}</td>
+            <td>{{ item.outros }}</td>
+            <td>{{ item.ipi }}</td>
+            <td>{{ item.ipiInc }}</td>
+            <td>{{ item.st }}</td>
+            <td>{{ item.fcp }}</td>
+            <td>{{ item.dif }}</td>
+            <td>
+              <button class="btn btn-sm btn-error">
+                {{ item.msg }}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
