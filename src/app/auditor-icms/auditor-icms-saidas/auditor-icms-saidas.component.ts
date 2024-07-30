@@ -47,7 +47,7 @@ notas = [
         ipiInc: 'R$ 0,00',
         st: 'R$ 0,00',
         fcp: 'R$ 0,00',
-        dif: -'R$ 27,00	',
+        dif: '-R$ 27,00	',
         msg: 'Existe diferença no cálculo'
     },
     {
@@ -131,7 +131,7 @@ notas = [
         ipiInc: 'R$ 0,00',
         st: 'R$ 0,00',
         fcp: 'R$ 0,00',
-        dif: -'R$ 38,72',
+        dif: '-R$ 38,72',
         msg: 'Existe diferença no cálculo'
     },
     {
