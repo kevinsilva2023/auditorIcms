@@ -1,1 +1,48 @@
-<p style="background-color: white;">auditor-icms-saidas works!</p>
+<div class="card shadow-sm">
+    <h5 class="card-header d-flex justify-content-between theme">
+        <div></div>
+        <div class="fs-5 fw-bold d-flex align-items-center">RESUMO CFOP SAÍDAS</div>
+        <button class="btn btn-sm btn-export">
+          <i class="bi bi-file-earmark-excel-fill"></i>
+          Exportar Excel
+        </button>
+    </h5>
+    
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>CFOP</th>
+                    <th>VL. CONTÁBIL</th>
+                    <th>BS. ICMS</th>
+                    <th>IMP. ICMS</th>
+                    <th>ISENTO ICMS</th>
+                    <th>OUTROS ICMS</th>
+                    <th>IMP. IPI</th>
+                    <th>IPI INCLUSO</th>
+                    <th>ICMS ST</th>
+                    <th>FCP</th>
+                    <th>DIFERENÇA</th>
+                    <th>MENSAGENS</th>
+                  </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="resumo of notas">
+                    <td>{{ resumo.cfop }}</td>
+                    <td>{{ resumo.vlCont }}</td>
+                    <td>{{ resumo.base }}</td>
+                    <td>{{ resumo.icms }}</td>
+                    <td>{{ resumo.isentos }}</td>
+                    <td>{{ resumo.outros }}</td>
+                    <td>{{ resumo.ipi }}</td>
+                    <td>{{ resumo.ipiInc }}</td>
+                    <td>{{ resumo.st }}</td>
+                    <td>{{ resumo.fcp }}</td>
+                    <td>{{ resumo.dif }}</td>
+                    <td>{{ resumo.msg }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
